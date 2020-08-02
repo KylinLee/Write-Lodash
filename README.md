@@ -18,4 +18,5 @@
 
 ```bash
 git branch lql
+git checkout lql
 ```
