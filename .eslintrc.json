@@ -1,0 +1,15 @@
+{
+    "root": true,
+    "env": {
+        "es6": true,
+        "node": true,
+        "browser": true
+    },
+    "rules": {
+        "camelcase": "never",
+        "quotes": [1, "double"]
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    }
+}
