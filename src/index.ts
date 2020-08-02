@@ -1,8 +1,10 @@
-import chunk from "./chunck";
+import compact from "./compact";
 import _ from "lodash";
 
 const arr = [1, 3, 34];
 
-console.log(chunk(arr, 2));
+const arr1 = [false, null, 0, "", undefined, 1, 2, 3, {}, ,];
 
-console.log(_.chunk(arr, 2));
+console.log(compact(arr1));
+
+console.log(compact([arr1]));
