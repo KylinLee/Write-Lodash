@@ -1,4 +1,5 @@
-export default function chunk(array: any[], size = 1) {
+// 利用数组方法 reduce()
+export default function (array: any[], size = 1) {
     if (array.length === 0 || size === 0) {
         return [];
     } else {
@@ -12,5 +13,21 @@ export default function chunk(array: any[], size = 1) {
             },
             [new Array()]
         );
+    }
+}
+
+// 直接使用for循环
+export function chunk(array: any[], size = 1) {
+    if (array.length === 0 || size === 0) {
+        return [];
+    } else {
+        let newArray: any[] = [new Array()];
+        for (let i = 0; i < array.length; i++) {
+            if (newArray[newArray.length - 1].length === size) {
+                newArray.push([]);
+            }
+            newArray[newArray.length - 1].push(array[i]);
+        }
+        return newArray;
     }
 }
