@@ -1,9 +1,11 @@
 import chunk from "./chunk";
 import compact from "./compact";
+import concat from "./concat";
 
 const dash = {
     chunk,
-    compact
+    compact,
+    concat
 };
 
 export default dash;
