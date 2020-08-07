@@ -1,6 +1,6 @@
 export default function (...args: any | any[]) {
     const newArray = [];
-    for (let item of args) {
+    for (const item of args) {
         if (item instanceof Array) {
             newArray.push(...item);
         } else {

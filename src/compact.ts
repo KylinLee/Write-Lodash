@@ -6,8 +6,8 @@ export default function (array: any[]) {
 }
 
 export function compact(array: any[]) {
-    let newArray = [];
-    for (let val of array) {
+    const newArray = [];
+    for (const val of array) {
         if (!!val) {
             newArray.push(val);
         }

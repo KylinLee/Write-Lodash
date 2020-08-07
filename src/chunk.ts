@@ -21,12 +21,12 @@ export function chunk(array: any[], size = 1) {
     if (array.length === 0 || size === 0) {
         return [];
     } else {
-        let newArray: any[] = [new Array()];
-        for (let i = 0; i < array.length; i++) {
+        const newArray: any[] = [new Array()];
+        for (const item of array) {
             if (newArray[newArray.length - 1].length === size) {
                 newArray.push([]);
             }
-            newArray[newArray.length - 1].push(array[i]);
+            newArray[newArray.length - 1].push(item);
         }
         return newArray;
     }
