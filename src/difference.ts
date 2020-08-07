@@ -1,6 +1,4 @@
-import { isFunctionLike } from "typescript";
-
-export default function (array: any[], value: any[]) {
+export default function (array: any[], value: any[] = []) {
     if (value instanceof Array && value.length !== 0) {
         const filter = new Set(value);
         const newArray: any = [];
