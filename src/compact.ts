@@ -5,6 +5,7 @@ export default function (array: any[]) {
     });
 }
 
+// 使用for循环
 export function compact(array: any[]) {
     const newArray = [];
     for (const val of array) {
