@@ -1,6 +1,6 @@
 import identity from "./identity"
 
-export default function (array: any[] | any, value: any[] | any = [], iteratee: any | any[] | string | object = identity) {
+export default function (array: any[] | any, value: any[] | any = [], iteratee: any | any[] = identity) {
     if (array instanceof Array) {
         if (value instanceof Array && value.length !== 0) {
             if (typeof iteratee === "function") {
@@ -15,9 +15,7 @@ export default function (array: any[] | any, value: any[] | any = [], iteratee: 
             }
             value = value.map((item) => { return iteratee(item) })
             const filter = new Set(value);
-            const transArray = array.map((item) => {
-                return iteratee(item)
-            })
+            const transArray = array.map((item) => { return iteratee(item) })
             const newArray: any = [];
             transArray.forEach((val, index) => {
                 if (!filter.has(val)) {
