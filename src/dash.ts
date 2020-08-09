@@ -4,6 +4,7 @@ import concat from "./concat";
 import difference from "./difference";
 import identity from "./identity"
 import differenceBy from "./differenceBy"
+import differenceWith from "./differenceWith"
 
 const dash = {
     chunk,
@@ -11,7 +12,8 @@ const dash = {
     concat,
     difference,
     identity,
-    differenceBy
+    differenceBy,
+    differenceWith
 };
 
 export default dash;

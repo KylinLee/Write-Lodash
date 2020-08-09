@@ -1,8 +1,8 @@
 import identity from "./identity"
 
-export default function (array: any[] | any, value: any[] | any = [], iteratee: any | any[] = identity) {
+export default function (array: any[] | any, values: any[] | any = [], iteratee: any | any[] = identity) {
     if (array instanceof Array) {
-        if (value instanceof Array && value.length !== 0) {
+        if (values instanceof Array && values.length !== 0) {
             let iterator: (item: any | any[]) => any
             if (typeof iteratee === "function") {
                 iterator = iteratee
@@ -35,8 +35,8 @@ export default function (array: any[] | any, value: any[] | any = [], iteratee: 
                     } */
                 }
             }
-            value = value.map((item) => { return iterator(item) })
-            const filter = new Set(value);
+            values = values.map((item) => { return iterator(item) })
+            const filter = new Set(values);
             const transArray = array.map((item) => { return iterator(item) })
             const newArray: any = [];
             transArray.forEach((val, index) => {

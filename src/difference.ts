@@ -1,7 +1,7 @@
-export default function (array: any[] | any, value: any[] = []) {
+export default function (array: any[] | any, values: any[] = []) {
     if (array instanceof Array) {
-        if (value instanceof Array && value.length !== 0) {
-            const filter = new Set(value);
+        if (values instanceof Array && values.length !== 0) {
+            const filter = new Set(values);
             const newArray: any = [];
             for (const item of array) {
                 if (!filter.has(item)) {
@@ -15,5 +15,4 @@ export default function (array: any[] | any, value: any[] = []) {
     } else {
         return []
     }
-
 }
