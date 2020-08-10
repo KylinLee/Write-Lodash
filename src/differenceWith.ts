@@ -5,11 +5,15 @@ export default function (array: any | any, values: any | any[] = [], comparator?
             const newArray: any = [];
             for (const item of array) {
                 if (comparator) {
+                    let status = true
                     for (const value of filter) {
                         if (comparator(item, value)) {
-                            newArray.push(item)
+                            status = false
                             break
                         }
+                    }
+                    if (status) {
+                        newArray.push(item)
                     }
                 } else {
                     if (!filter.has(item)) {
