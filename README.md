@@ -16,8 +16,24 @@
 
 使用 WebPack 进行热更新，使用 TypeScript，主分支不进行修改，自建分支并推送到相关分支，如：
 
+## Git 规范
+
 ```bash
-git branch lql
-git checkout lql
-git push origin lql
+git branch dev
+git checkout dev
+git push origin dev
 ```
+
+## npm 命令
+
+### 热更新
+
+`npm start`
+
+### 单元测试
+
+`npm test`
+
+### 打包
+
+`npm run build`
