@@ -1,6 +1,4 @@
-import dash from "./dash";
-import { drop } from "./drop"
-
+import dash from "./lib/dash";
 import _ from "lodash";
 
 const origin = [false, null, 0, NaN, "", "string", undefined, 1, 2, 3, {}, [], [1]];
@@ -16,5 +14,6 @@ console.log(_.drop(origin, 2))
 console.log(origin)
 console.log(dash.drop(origin, 2))
 console.log(origin)
-console.log(drop(origin, 2))
 console.log(origin)
+
+console.log(dash.dropRight([1, 2]))

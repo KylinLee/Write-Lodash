@@ -6,7 +6,12 @@
     "jsRules": {},
     "rules": {
         "camelcase": "never",
-        "no-console": false
+        "no-console": false,
+        "quotemark": [
+            true,
+            "double",
+            "avoid-escape"
+        ]
     },
     "rulesDirectory": []
 }

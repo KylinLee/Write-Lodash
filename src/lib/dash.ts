@@ -6,6 +6,7 @@ import identity from "./identity"
 import differenceBy from "./differenceBy"
 import differenceWith from "./differenceWith"
 import drop from "./drop"
+import dropRight from "./dropRight"
 
 const dash = {
     chunk,
@@ -15,7 +16,8 @@ const dash = {
     identity,
     differenceBy,
     differenceWith,
-    drop
+    drop,
+    dropRight
 };
 
 export default dash;
