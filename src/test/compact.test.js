@@ -2,14 +2,9 @@ import defaultCompact from "../lib/compact"
 import { compact } from "../lib/compact"
 import _ from "lodash"
 
-const standard = _.compact([false, null, 0, , "", undefined, 1, 2, 3, {}, ,])
-const defaultTestValue = defaultCompact([false, null, 0, , "", undefined, 1, 2, 3, {}, ,])
-const testValue = compact([false, null, 0, , "", undefined, 1, 2, 3, {}, ,])
-
-test("default compact test", () => {
-    expect(defaultTestValue).toStrictEqual(standard)
-})
+const testValue = [false, null, 0, , "", undefined, 1, 2, 3, {}, ,]
 
 test("compact test", () => {
-    expect(testValue).toStrictEqual(standard)
-});
+    expect(compact(testValue)).toStrictEqual(_.compact(testValue))
+    expect(defaultCompact(testValue)).toStrictEqual(_.compact(testValue))
+})

@@ -1,22 +1,20 @@
 import chunk from "../lib/chunk"
 import _ from "lodash"
 
-const standard1 = _.chunk([1, 2, 3, 4, 5, 6, 7, 8, 9], 3)
-const standard2 = _.chunk([1, 2, 3, 4, 5, 6, 7, 8, 9], 2)
-const standard3 = chunk([, undefined, {}, [], false, NaN, "string", 8, 9], 2)
-
-const testValue1 = chunk([1, 2, 3, 4, 5, 6, 7, 8, 9], 3)
-const testValue2 = chunk([1, 2, 3, 4, 5, 6, 7, 8, 9], 2)
-const testValue3 = chunk([, undefined, {}, [], false, NaN, "string", 8, 9], 2)
+const testValue1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+const testValue2 = [, undefined, {}, [], false, NaN, "string", 8, 9]
 
 
-test("chunk test 1", () => {
-    expect(testValue1).toStrictEqual(standard1)
+test("chunk test the different zise", () => {
+    for (let turn = 0; turn < 20; turn++) {
+        expect(chunk(testValue1, turn)).toStrictEqual(_.chunk(testValue1, turn))
+    }
 })
 
-test("chunk test 2", () => {
-    expect(testValue2).toStrictEqual(standard2)
-})
-test("chunk test 3", () => {
-    expect(testValue3).toStrictEqual(standard3)
-})
+// lodash的chunk函数处理`empty`空值的时候会返回`undefined`
+// 如 [,]会返回[[undefined]]
+// 个人认为应该保留原值，不做处理
+
+// test("chunk test specail value", () => {
+//     expect(chunk(testValue2)).toStrictEqual(_.chunk(testValue2))
+// })
