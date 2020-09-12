@@ -11,10 +11,6 @@ test("chunk test the different zise", () => {
     }
 })
 
-// lodash的chunk函数处理`empty`空值的时候会返回`undefined`
-// 如 [,]会返回[[undefined]]
-// 个人认为应该保留原值，不做处理
-
-// test("chunk test specail value", () => {
-//     expect(chunk(testValue2)).toStrictEqual(_.chunk(testValue2))
-// })
+test("chunk test specail value", () => {
+    expect(chunk(testValue2)).toStrictEqual(_.chunk(testValue2))
+})
