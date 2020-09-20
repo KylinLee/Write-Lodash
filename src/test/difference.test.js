@@ -1,4 +1,4 @@
-import defference from "../lib/difference"
+import dash from "../lib/dash"
 import _ from "lodash"
 
 const testValue1 = [3, 2, 1, ""]
@@ -10,13 +10,25 @@ const filter3 = [NaN, +0, -0]
 
 
 test("difference test the number and string", () => {
-    expect(defference(testValue1, filter1)).toStrictEqual(_.defference(testValue1, filter1))
+    expect(
+        dash.defference(testValue1, filter1)
+    ).toStrictEqual(
+        _.defference(testValue1, filter1)
+    )
 });
 
 test("difference test the object", () => {
-    expect(defference(testValue2, filter2)).toStrictEqual(_.defference(testValue2, filter2))
+    expect(
+        dash.defference(testValue2, filter2)
+    ).toStrictEqual(
+        _.defference(testValue2, filter2)
+    )
 });
 
 test("difference test the special number", () => {
-    expect(defference(testValue3, filter3)).toStrictEqual(_.defference(testValue3, filter3))
+    expect(
+        dash.defference(testValue3, filter3)
+    ).toStrictEqual(
+        _.defference(testValue3, filter3)
+    )
 });
