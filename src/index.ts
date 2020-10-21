@@ -1,4 +1,4 @@
-import dash from "./lib/dash";
+import dash from "./lib";
 import _ from "lodash";
 
 const arr2 = new Array(10)

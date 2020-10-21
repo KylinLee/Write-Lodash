@@ -10,6 +10,7 @@ import dropRight from "./dropRight"
 import dropWhile from "./dropWhile"
 import dropRightWrile from "./dropRightWhile"
 import fill from "./fill"
+import findIndex from "./findIndex"
 
 const dash = {
     chunk,
@@ -23,7 +24,8 @@ const dash = {
     dropRight,
     dropWhile,
     dropRightWrile,
-    fill
+    fill,
+    findIndex
 };
 
 export default dash;
