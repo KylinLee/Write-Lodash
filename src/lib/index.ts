@@ -11,8 +11,10 @@ import dropWhile from "./dropWhile"
 import dropRightWrile from "./dropRightWhile"
 import fill from "./fill"
 import findIndex from "./findIndex"
+import indexOf from "./indexOf"
 
-const dash = {
+
+export default {
     chunk,
     compact,
     concat,
@@ -25,7 +27,6 @@ const dash = {
     dropWhile,
     dropRightWrile,
     fill,
-    findIndex
+    findIndex,
+    indexOf
 };
-
-export default dash;
