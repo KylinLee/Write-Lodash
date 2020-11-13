@@ -1,5 +1,5 @@
 import _ from "lodash"
-import dash from "../lib/dash"
+import dash from "../lib/"
 
 const arr1 = new Array(10)
 const arr2 = new Array(10)

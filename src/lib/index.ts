@@ -14,7 +14,7 @@ import findIndex from "./findIndex"
 import indexOf from "./indexOf"
 
 
-export default {
+export {
     chunk,
     compact,
     concat,
@@ -30,3 +30,20 @@ export default {
     findIndex,
     indexOf
 };
+
+export default {
+    chunk,
+    compact,
+    concat,
+    difference,
+    identity,
+    differenceBy,
+    differenceWith,
+    drop,
+    dropRight,
+    dropWhile,
+    dropRightWrile,
+    fill,
+    findIndex,
+    indexOf
+}

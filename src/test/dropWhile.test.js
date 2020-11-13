@@ -1,6 +1,5 @@
 import _ from "lodash"
-import dash from "../lib"
-const { dropWhile } = dash
+import { dropWhile } from "../lib"
 
 const user = [
     { 'user': 'barney', 'active': false },

@@ -1,4 +1,4 @@
-import identity from "./identity"
+import { identity } from "./index"
 
 export default function (array: any[], predicate = identity) {
     let start = 0
